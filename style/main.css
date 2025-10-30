@@ -4,6 +4,8 @@
     --accent-1-color: #04AF98;
     --accent-2-color: #FDFF86;
     --accent-3-color: #8929FF;
+
+    --font-size-header-and-footer: clamp(24px, 32px, 40px);
 }
 
 * {
@@ -20,5 +22,277 @@
 body {
     background-color: var(--body-and-text-color);
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
     scroll-behavior: smooth;
+}
+
+.header {
+    background-color: var(--accent-1-color);
+    width: 100%;
+    height: 80px;
+    padding: 0 3%;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo-header, .logo-footer, .header a {
+    background-color: var(--body-and-text-color);
+    color: var(--accent-1-color);
+    font-size: var(--font-size-header-and-footer);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+a img {
+    padding-left: 10px;
+}
+
+.nav-header-ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-header-li {
+    list-style: none;
+}
+
+.nav-header-li a {
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 3%;
+}
+
+.hero::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--body-and-text-color), var(--accent-1-color));
+    background-size: 250% 100%;
+    z-index: -1;
+}
+
+.container-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.examples-of-quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.example-of-quote {
+    border-radius: 20px;
+    border: var(--accent-1-color) 3px solid;
+    display: flex;
+}
+
+.div-image-quote img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.div-quote-example {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.p-quote-example {
+    width: 100%;
+    font-size: 16px;
+    color: var(--accent-1-color);
+}
+
+.p-author-quote {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    display: flex;
+    justify-content: end;
+}
+
+.div-hero-title-and-get-start {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titles-of-hero {
+    margin: 15px;
+}
+
+h1 {
+    background-color: var(--accent-1-color);
+    color: var(--body-and-text-color);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+h2 {
+    background-color: var(--accent-2-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+h3 {
+    background-color: var(--accent-3-color);
+    color: var(--body-and-text-color);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.div-get-start {
+    display: inline-flex;
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.div-get-start::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-1-color), var(--accent-2-color), var(--accent-3-color));
+    border-radius: 20px;
+    transform: scaleX(1.07) scaleY(1.12);
+    z-index: -1;
+}
+
+.div-get-start a {
+    display: flex;
+    align-items: center;
+    background-color: var(--body-and-text-color);
+    border-radius: 20px;
+    padding: 15px;
+    color: var(--accent-1-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.about-us {
+    width: 100%;
+    background-image: url(../assets/images/pattern-1.png);
+}
+
+.container-about-us {
+    padding: 3%;
+}
+
+.div-title-about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h4 {
+    background-color: var(--accent-1-color);
+    color: var(--body-and-text-color);
+    font-weight: bold;
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 0;
+}
+
+h5 {
+    background-color: var(--body-and-text-color);
+    color: var(--accent-1-color);
+    border: 3px solid var(--accent-1-color);
+    font-weight: bold;
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 20px;
+}
+
+.div-2-cards-about-us {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px 400px;
+}
+
+.card-about-us {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #04af988a;
+    border: 3px solid var(--text-color);
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.p-card-about-us {
+    color: var(--body-and-text-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    background-color: var(--accent-1-color);
+    width: 100%;
+    height: 80px;
+    padding: 0 3%;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.div-footer-text {
+    display: flex;
+}
+
+.rigths-protected-footer {
+    color: var(--body-and-text-color);
+    font-size: var(--font-size-header-and-footer);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.div-a-footer {
+    width: 250px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.div-a-footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
