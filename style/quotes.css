@@ -55,11 +55,25 @@ body {
     list-style: none;
 }
 
+.burger-menu {
+    display: none;
+}
+
+.stick {
+    background-color: var(--body-and-text-color);
+    width: 70px;
+    height: 6px;
+    border-radius: 3px;
+}
+
 .main-container {
     padding: 60px;
     width: 100%;
-    display: grid;
-    place-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .display-of-quotes {
@@ -119,6 +133,11 @@ body {
     cursor: pointer;
 }
 
+.previos img, .next img {
+    width: 80px;
+    height: 40px;
+}
+
 .next img {
     transform: rotate(180deg);
 }
@@ -159,4 +178,48 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 601px) {
+    .nav-header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .display-of-quotes {
+        height: 400px;
+    }
+
+    .management-with-quotes {
+        gap: 50px;
+    }
+
+    .rigths-protected-footer, .div-a-footer {
+        display: none;
+    }
+}
+
+@media ((min-width: 601px) and (max-width: 1024px)) {
+    .nav-header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .management-with-quotes {
+        gap: 75px;
+    }
+
+    .div-a-footer {
+        display: none;
+    }
 }

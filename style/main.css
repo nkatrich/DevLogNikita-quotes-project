@@ -72,6 +72,17 @@ a img {
     align-items: center;
 }
 
+.burger-menu {
+    display: none;
+}
+
+.stick {
+    background-color: var(--body-and-text-color);
+    width: 70px;
+    height: 6px;
+    border-radius: 3px;
+}
+
 .hero {
     width: 100%;
     height: 100%;
@@ -139,10 +150,12 @@ a img {
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin: 30px;
 }
 
 .titles-of-hero {
     margin: 15px;
+    
 }
 
 h1 {
@@ -150,6 +163,20 @@ h1 {
     color: var(--body-and-text-color);
     border-radius: 30px;
     padding: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 4;
+}
+
+h1::after {
+    position: absolute;
+    content: "";
+    top: 105%;
+    left: 50%;
+    width: 30px;
+    height: 40px;
+    background-color: var(--accent-1-color);
+    transform: translate(-50%, -50%);
 }
 
 h2 {
@@ -157,6 +184,20 @@ h2 {
     color: var(--text-color);
     border-radius: 30px;
     padding: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+h2::after {
+    position: absolute;
+    content: "";
+    top: 105%;
+    left: 50%;
+    width: 30px;
+    height: 40px;
+    background-color: var(--accent-2-color);
+    transform: translate(-50%, -50%);
 }
 
 h3 {
@@ -164,6 +205,9 @@ h3 {
     color: var(--body-and-text-color);
     border-radius: 30px;
     padding: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 6;
 }
 
 .div-get-start {
@@ -202,6 +246,8 @@ h3 {
 .about-us {
     width: 100%;
     background-image: url(../assets/images/pattern-1.png);
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 .container-about-us {
@@ -245,7 +291,7 @@ h5 {
 .card-about-us {
     padding: 15px;
     border-radius: 20px;
-    background-color: #04af988a;
+    background-color: #04af98ba;
     border: 3px solid var(--text-color);
     margin: 15px;
     display: flex;
@@ -295,4 +341,54 @@ h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 601px) {
+    .nav-header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .div-2-cards-about-us {
+        grid-template-columns: 300px;
+    }
+
+    .rigths-protected-footer, .div-a-footer {
+        display: none;
+    }
+}
+
+@media ((min-width: 601px) and (max-width: 1024px)) {
+    .nav-header-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .div-2-cards-about-us {
+        grid-template-columns: 300px 300px;
+    }
+
+    .div-a-footer {
+        display: none;
+    }
 }
