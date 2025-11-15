@@ -197,7 +197,7 @@ function manupulationQuote() {
         let generateNumForBg = Math.floor(Math.random() * bgImages.length);
         let eachLetter = randomQuotes[currentQuote].quote.split('');
         let letterDelay = 0.0;
-        let allSpans;
+        let allSpans = quote.children;
 
         // insert quote
         author.textContent = randomQuotes[currentQuote].author;
@@ -220,8 +220,6 @@ function manupulationQuote() {
                 quote.innerHTML += `<span>${letter}</span>`;
             }
         }); 
-
-        allSpans = quote.children;
         
         for (span of allSpans) {
             span.style.opacity = 0;
