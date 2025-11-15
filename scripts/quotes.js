@@ -5,7 +5,6 @@
     const backgroundFilterLayer = document.querySelector('.background-filter-layer');
     const displayOfQuotes = document.querySelector('.display-of-quotes');
     const quote = document.querySelector('.quote');
-    const childsOfQuote = quote.children;
     const author = document.querySelector('.author');
     const previos = document.querySelector('.previos');
     const next = document.querySelector('.next');
@@ -259,8 +258,6 @@ document.body.addEventListener('keyup', function(e) {
 // call one time
 
 nextQuote();
-
-// test 
 // Способ проще: сделать каунтер от 0 до 25, и и по каунтеру вызывать обьект и в одном маассиве вызываешь обьект(тут и память автоматически будет)
 
 // Код ранее:

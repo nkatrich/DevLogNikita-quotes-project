@@ -5,6 +5,8 @@
     --accent-2-color: #FDFF86;
     --accent-3-color: #8929FF;
 
+    --hover-body-and-text-color: #cccccc;
+
     --font-size-header-and-footer: clamp(24px, 32px, 40px);
 }
 
@@ -14,7 +16,7 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('./fonts/Roboto-Regular.woff2') format('woff2');
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
@@ -52,10 +54,20 @@ body {
     padding: 10px;
     border-radius: 50px;
     text-decoration: none;
+    transition: background-color 0.4s ease;
 }
 
-a img {
+.header a:hover {
+    background-color: var(--hover-body-and-text-color);
+}
+
+header a img {
     padding-left: 10px;
+    transition: transform 0.4s ease;
+}
+
+header a:hover img{
+    transform: rotate(-45deg);
 }
 
 .nav-header-ul {
@@ -239,6 +251,7 @@ h3 {
     background: linear-gradient(45deg, var(--accent-1-color), var(--accent-2-color), var(--accent-3-color));
     border-radius: 20px;
     transform: scaleX(1.07) scaleY(1.12);
+    filter: blur(10px);
     z-index: -1;
 }
 
@@ -252,6 +265,19 @@ h3 {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
+    transition: transform 0.4s ease;
+}
+
+.div-get-start a:hover {
+    transform: scale(1.05);
+}
+
+.div-get-start img {
+    transition: transform 0.4s ease;
+}
+
+.div-get-start a:hover img {
+    transform: rotate(-45deg);
 }
 
 .about-us {
@@ -307,6 +333,12 @@ h5 {
     margin: 15px;
     display: flex;
     align-items: center;
+    transition: backdrop-filter 0.4s ease, scale 0.4s ease;
+}
+
+.card-about-us:hover {
+    backdrop-filter: blur(5px);
+    scale: 1.03;
 }
 
 .p-card-about-us {
