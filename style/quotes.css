@@ -5,6 +5,9 @@
     --accent-2-color: #FDFF86;
     --accent-3-color: #8929FF;
 
+    --hover-body-and-text-color: #cccccc;
+    --hover-accent-1-color: #008372;
+
     --font-size-header-and-footer: clamp(24px, 32px, 40px);
 }
 
@@ -52,6 +55,15 @@ body {
     padding: 10px;
     border-radius: 50px;
     text-decoration: none;
+    transition: background-color 0.4s ease;
+}
+
+.header a:hover {
+    background-color: var(--hover-body-and-text-color);
+}
+
+.logo-footer:hover {
+    background-color: var(--hover-body-and-text-color);
 }
 
 .nav-header-li {
@@ -229,11 +241,26 @@ body {
     border: none;
     border-radius: 30px;
     cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.4s ease;
+}
+
+.previos:hover, .next:hover {
+    background-color: var(--hover-accent-1-color);
+    transform: scale(1.1);
 }
 
 .previos img, .next img {
     width: 80px;
     height: 40px;
+    transition: transform 0.4s ease;
+}
+
+.previos:hover img {
+    transform: rotate(45deg);
+}
+
+.next:hover img {
+    transform: rotate(135deg);
 }
 
 .next img {
