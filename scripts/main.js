@@ -15,6 +15,7 @@ burgerMenu.addEventListener('click', toggleBurgerMenu);
 
 document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('wheel', (e) => {
+        if (e.ctrlKey || e.metaKey) return;
         e.preventDefault();
 
         const cordScroll = 200;
