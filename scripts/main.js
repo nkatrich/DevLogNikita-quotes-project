@@ -2,10 +2,12 @@
 
 const burgerMenu = document.querySelector('.burger-menu');
 const navHeaderNavPhone = document.querySelector('.nav-header-nav-phone');
+const navHeaderLiPhone = document.querySelector('.nav-header-li-phone');
 
 // Burger-menu
 
 function toggleBurgerMenu() {
+    navHeaderNavPhone.style.display = 'flex';
     navHeaderNavPhone.classList.toggle('open');
 }
 
@@ -38,4 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
     }, {passive: false});
+})
+
+// case to remove burger menu for button "О нас"
+
+navHeaderLiPhone.addEventListener('click', () => {
+    navHeaderNavPhone.style.display = 'none';
 })

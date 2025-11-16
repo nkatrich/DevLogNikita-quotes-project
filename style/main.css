@@ -273,6 +273,7 @@ h3 {
 }
 
 .div-get-start img {
+    margin-left: 10px;
     transition: transform 0.4s ease;
 }
 
