@@ -426,21 +426,3 @@ body {
         display: none;
     }
 }
-
-@media (hover: none) {
-        .previos:hover, .next:hover {
-        background-color: var(--accent-1-color);
-        color: var(--body-and-text-color);
-        padding: 15px;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: background-color 0.4s ease, transform 0.4s ease;
-    }
-
-    .previos:hover img, .next:hover img {
-        width: 80px;
-        height: 40px;
-        transition: transform 0.4s ease;
-    }
-}

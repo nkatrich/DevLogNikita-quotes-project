@@ -7,7 +7,6 @@ const navHeaderLiPhone = document.querySelector('.nav-header-li-phone');
 // Burger-menu
 
 function toggleBurgerMenu() {
-    navHeaderNavPhone.style.display = 'flex';
     navHeaderNavPhone.classList.toggle('open');
 }
 
@@ -45,5 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
 // case to remove burger menu for button "О нас"
 
 navHeaderLiPhone.addEventListener('click', () => {
-    navHeaderNavPhone.style.display = 'none';
+    navHeaderNavPhone.classList.toggle('open');
 })
