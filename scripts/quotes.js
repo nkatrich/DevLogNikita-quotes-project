@@ -219,11 +219,7 @@ function manupulationQuote() {
             else {
                 quote.innerHTML += `<span>${letter}</span>`;
             }
-        }); 
-        
-        for (span of allSpans) {
-            span.style.opacity = 0;
-        }
+        });
    
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
